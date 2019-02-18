@@ -1,4 +1,7 @@
-console.log('bienvenue dans node');
-for(let i = 0; i< 10; i++){
-    console.log(i);
-}
+var http = require('http');
+
+var server = http.createServer(function(req, res) {
+  res.writeHead(200);
+  res.end('Salut tout le monde !');
+});
+server.listen(8080);
