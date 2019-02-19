@@ -1,0 +1,34 @@
+html
+    head
+        title BeMessenger
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        if !name
+            h1= "Hello Inconnu!" 
+            .entete
+                form(method="GET")
+                    label(for="name") Entrez votre pseudo : 
+                    input(type="text", name="name", id="name")
+                    input(type="submit" value="submit")
+            
+        else
+            //RAJOUTER UN PHOTO POUR NOUVEL UTILISATEUR
+            h1= "Hello "+name+" !" 
+            
+            .contentMessenger
+                h2="Bienvenue "+name
+                form(method="")
+                    label(for="message") Entrez votre message : 
+                    input(type="text", name="message", id="message")
+                    input(type="submit" value="submit")
+                p= message
+    
+    script(src="/socket.io/socket.io.js")
+        
+        
+    
+        
+            
